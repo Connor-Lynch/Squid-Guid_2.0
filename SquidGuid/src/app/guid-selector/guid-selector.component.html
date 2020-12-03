@@ -1,5 +1,11 @@
-<p>guid-selector works!</p>
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-    <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" value="Sushi">
-  
+<div class="app">
+  <h1>SquidGuid</h1>
+  <mat-form-field class="guid-value">
+    <input matInput readonly placeholder="New Guid" id="guid" value="{{ guid }}" />
+  </mat-form-field>
+  <mat-icon aria-hidden="false" aria-label="Copy Icon" class="copy" (click)="copyGuid()">content_copy</mat-icon>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="generateGuid()">New Guid</button>
+    <button mat-raised-button color="default">Settings</button>
+  </div>
+</div>
